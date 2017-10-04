@@ -307,6 +307,8 @@ plot(nppCrop)
 
 Just by plotting both the sea surface temperature and primary productivity data, you can tell right away that these two datasets have different cell resolutions. The NPP data needs to be resampled to the same cell size as SST in order to do any sort of analysis on these two. Use the *nearest neighbor* method to avoid interpolation between points. We want to keep the data values the same as the original data, but at a higher resolution.  
 
+Basically, only use nearest neighbor for categorical values.
+
 Here you can see the difference:
 
 ```{r resample,message=F,warning=F,quiet=T,verbose=F,results=F}
